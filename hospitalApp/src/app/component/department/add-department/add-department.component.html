@@ -1,0 +1,7 @@
+<h2 class="form-title">Add Department</h2>
+
+<form [formGroup]="dearForm" (submit)="onsubmit()" class="custom-form">
+  <label for="">Department Name</label>
+  <input type="text" formControlName="department" placeholder="Enter-Department"> <br> <br>
+  <button type="submit">Submit</button>
+</form>

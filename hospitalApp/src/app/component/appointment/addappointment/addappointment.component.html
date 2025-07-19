@@ -1,0 +1,30 @@
+<h2>Add New Appointment</h2>
+
+<form [formGroup]="appointmentform" (ngSubmit)="onsubmit()" class="custom-form">
+   <div>
+    <label>Patient Name:</label>
+    <input formControlName="patientName" />
+  </div>
+
+  <div>
+    <label>Doctor ID:</label>
+    <input type="number" formControlName="doctorId" />
+  </div>
+
+  <div>
+    <label>Doctor Name:</label>
+    <input formControlName="doctorName" />
+  </div>
+
+  <div>
+    <label>Date:</label>
+    <input type="date" formControlName="date" />
+  </div>
+
+  <div>
+    <label>Status:</label>
+    <input formControlName="status" />
+  </div>
+
+    <button type="submit">Submit</button>
+</form>

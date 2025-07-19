@@ -1,0 +1,117 @@
+.table-title {
+  text-align: center;
+  color: #004e89;
+  margin-top: 30px;
+}
+
+/* Card-style table */
+.card-table {
+  width: 95%;
+  margin: 30px auto;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  background: transparent;
+}
+
+.card-table thead th {
+  background-color: #0daaf9;
+  color: #fff;
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+  border: none;
+}
+
+.card-table tbody tr {
+  background-color: #ede7f6;
+  box-shadow: 0 4px 12px rgba(69, 39, 160, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.card-table tbody tr:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 16px rgba(69, 39, 160, 0.3);
+}
+
+.card-table tbody td {
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #d1c4e9;
+}
+
+.card-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.card-table button {
+  background-color: #f06292;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card-table button:hover {
+  background-color: #c2185b;
+}
+.custom-form {
+  width: 90%;
+  max-width: 600px;
+  margin: 30px auto;
+  background-color: #e3f2fd; /* Light blue background */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(13, 170, 249, 0.2); /* same as table shadow */
+  border: 2px solid #0daaf9;
+}
+
+.custom-form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+  color: #004e89; /* Same as title color */
+}
+
+.custom-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid #90caf9; /* light blue border */
+  font-size: 14px;
+  background-color: #ffffff;
+}
+
+.custom-form button {
+  background-color: #0daaf9;
+  color: white;
+  padding: 10px 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-form button:hover {
+  background-color: #0077c2; /* darker blue on hover */
+}
+.cancel-btn {
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-left: 10px;
+  padding: 10px 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #c62828;
+}

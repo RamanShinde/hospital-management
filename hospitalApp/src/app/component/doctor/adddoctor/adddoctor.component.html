@@ -1,0 +1,19 @@
+<h2>Add Doctor</h2>
+
+<form [formGroup]="DoctorForm" (ngSubmit)="onsubmit()" class="custom-form">
+  <label for="doctorname">Doctor Name</label>
+  <input type="text" id="doctorname" formControlName="doctorname" placeholder="Enter Doctor Name" /><br><br>
+
+  <label for="specilization">Specialization</label>
+  <input type="text" id="specilization" formControlName="specilization" placeholder="Enter Specialization" /><br><br>
+
+  <label for="phonenumber">Phone Number</label>
+  <input type="tel" id="phonenumber" formControlName="phonenumber" placeholder="Enter Phone Number" /><br><br>
+
+  <div formGroupName="department">
+    <label for="dept_id">Department ID</label>
+    <input type="number" id="dept_id" formControlName="deptid" placeholdear="Enter Department ID" /><br><br>
+  </div>
+
+  <button type="submit">Add Doctor</button>
+</form>

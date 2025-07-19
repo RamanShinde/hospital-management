@@ -1,0 +1,64 @@
+<h2 class="table-title">Appointment List</h2>
+
+<table class="card-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>DoctorName</th>
+      <th>Appointment Date</th>
+      <th>Appointment Status</th>
+      <th colspan="2">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let appointment of appointments; let i = index">
+      <td>{{ appointment.appointmentId }}</td>
+      <td>{{ appointment. patientName }}</td>
+      <td>{{ appointment.doctorName }}</td>
+      <td>{{ appointment.date }}</td>
+      <td>{{ appointment.status }}</td>
+      <td>
+        <button (click)="editForm(appointment, appointment.appointmentId)">✏️</button>
+      </td>
+      <td>
+        <button (click)="deleteAppointment(appointment.appointmentId)">🗑️</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- Edit Form Section -->
+<div *ngIf="extingindex !== null">
+  <h2  class="table-title">Edit Appointment</h2>
+<form [formGroup]="updateappointForm" (ngSubmit)="updateForm()" class="custom-form">
+ <div>
+    <label>Patient Name:</label>
+    <input formControlName="patientName" />
+  </div>
+
+  <div>
+    <label>Doctor ID:</label>
+    <input type="number" formControlName="doctorId" />
+  </div>
+
+  <div>
+    <label>Doctor Name:</label>
+    <input formControlName="doctorName" />
+  </div>
+
+  <div>
+    <label>Date:</label>
+    <input type="date" formControlName="date" />
+  </div>
+
+  <div>
+    <label>Status:</label>
+    <input formControlName="status" />
+  </div>
+
+  <button type="submit">Update</button>
+    <button type="button" (click)="cancelEdit()" class="cancel-btn">Cancel</button>
+</form>
+</div>

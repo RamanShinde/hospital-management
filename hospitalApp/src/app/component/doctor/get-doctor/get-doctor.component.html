@@ -1,0 +1,51 @@
+
+ 
+<h2 class="table-title">Doctor Dashboard</h2>
+
+<table class="card-table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Specialization</th>
+      <th>phone-number</th>
+       <th>Isavailable</th>
+      <th>Department_id</th>
+      <th colspan="2">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let doc of doctors;let i=index">
+      <td>{{ doc.did }}</td>
+      <td>{{ doc.doctorname }}</td>
+      <td>{{ doc.specilization }}</td>
+      <td>{{ doc.phonenumber }}</td>
+      <td>{{doc.available}}</td>
+      <td>{{ doc.department.deptid }}</td>
+      <td><button class="table-btn edit-btn"  (click)="editForm(doc,i)">Edit</button></td>
+      <td><button class="table-btn delete-btn"  (click)="deleteDoctor(doc.did)">delete</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="extingIndex!==null">
+  <form [formGroup]="updatedoctor" (ngSubmit)="updateForm()" class="custom-form">
+  <label for="doctorname">Doctor Name</label>
+  <input type="text" id="doctorname" formControlName="doctorname" placeholder="Enter Doctor Name" /><br><br>
+
+  <label for="specilization">Specialization</label>
+  <input type="text" id="specilization" formControlName="specilization" placeholder="Enter Specialization" /><br><br>
+
+  <label for="phonenumber">Phone Number</label>
+  <input type="tel" id="phonenumber" formControlName="phonenumber" placeholder="Enter Phone Number" /><br><br>
+
+  <div formGroupName="department">
+    <label for="dept_id">Department ID</label>
+    <input type="number" id="dept_id" formControlName="deptid" placeholder="Enter Department ID" /><br><br>
+  </div>
+
+  <button type="submit"  class="table-btn edit-btn">update</button>
+  <button type="button" (click)="cancel()" class="table-btn delete-btn" >cancel-btn</button>
+</form>
+
+</div>

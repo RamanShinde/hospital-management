@@ -1,0 +1,19 @@
+<h2 class="table-title">Department List</h2>
+
+<table class="card-table" border="1px">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th colspan="2">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dept of departments">
+      <td>{{ dept.deptid }}</td>
+      <td>{{ dept.department }}</td>
+      <td><button>Edit</button></td>
+      <td><button>Delete</button></td>
+    </tr>
+  </tbody>
+</table>

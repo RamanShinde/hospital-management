@@ -1,0 +1,33 @@
+<h2>Add Patient</h2>
+
+<form [formGroup]="patientForm" (ngSubmit)="onsubmit()">
+  <label>Patient Name:</label>
+  <input type="text" formControlName="patinetname" />
+
+  <label>Age:</label>
+  <input type="number" formControlName="age" />
+
+  <label>Gender:</label>
+  <select formControlName="gender">
+    <option value="">Select Gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Other">Other</option>
+  </select>
+
+  <label>Address:</label>
+  <input type="text" formControlName="address" />
+
+  <label>Phone:</label>
+  <input type="number" formControlName="phone" />
+
+  <label>Admitted Date:</label>
+  <input type="date" formControlName="admittedDate" />
+
+  <div formGroupName="doctor">
+    <label>Assign Doctor:</label>
+    <input type="number" formControlName="did" />
+  </div>
+
+  <button type="submit">Submit</button>
+</form>

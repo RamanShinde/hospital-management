@@ -1,0 +1,35 @@
+<div class="dashboard-heading">
+  <h2>Your Today's Appointments</h2>
+</div>
+
+<table class="card-table" *ngIf="appoitments.length>0;else noData">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>DoctorName</th>
+      <th>Appointment Date</th>
+      <th>Appointment Status</th>
+      <th colspan="2">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let appointment of appoitments; let i = index">
+      <td>{{ appointment.appointmentId }}</td>
+      <td>{{ appointment. patientName }}</td>
+      <td>{{ appointment.doctorName }}</td>
+      <td>{{ appointment.date }}</td>
+      <td>{{ appointment.status }}</td>
+      <td>
+        <!-- <button (click)="editForm(appointment, appointment.appointmentId)">✏️</button> -->
+      </td>
+      <td>
+        <!-- <button (click)="deleteAppointment(appointment.appointmentId)">🗑️</button> -->
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #noData>
+  <p>No appointments for today.</p>
+</ng-template>
