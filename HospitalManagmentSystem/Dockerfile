@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy your Spring Boot jar file into the container
-COPY target/*.jar app.jar
+COPY target/HospitalManagmentSystem-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the port your app runs on
 EXPOSE 8080
