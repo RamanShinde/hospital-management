@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class DoctorService {
    
-  private baseurl=`${environment.apiUrl}/Doctor`;
+  private baseurl='https://hospital-management-3y59.onrender.com/Doctor';
 
 
   constructor(
