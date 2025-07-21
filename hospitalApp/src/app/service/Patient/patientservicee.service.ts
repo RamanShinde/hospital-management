@@ -2,12 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { HtmlParser } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/Environment/environment.prod';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PatientserviceeService {
-  private baseurl="http://localhost:8080/Patient";
+   
+    private baseurl=`${environment.apiUrl}/Patient`;
 
   constructor(
     private http:HttpClient

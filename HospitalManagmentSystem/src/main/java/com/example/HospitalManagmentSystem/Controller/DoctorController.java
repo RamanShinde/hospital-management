@@ -7,7 +7,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {
+        "http://localhost:4200",
+        "https://hospital-frontend-y4d0.onrender.com"
+})
 @RestController
 @RequestMapping("/Doctor")
 public class DoctorController {
