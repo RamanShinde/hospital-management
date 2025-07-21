@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+/* Mobile-first reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Flex layout helpers */
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+/* Make tables & cards scrollable on small screens */
+.table-wrapper {
+  overflow-x: auto;
+}
