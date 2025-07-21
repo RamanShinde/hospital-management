@@ -34,7 +34,7 @@ public class DepartmentController {
 	}
 
 	@DeleteMapping("/delete-{did}")
-	public String deleteDepartment(@RequestParam int did){
+	public String deleteDepartment(@PathVariable int did){
 		service.deleteDepartment(did);
 		return "Delete user Successfully !!";
 	}
