@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 export class DepartmentserviceService {
 
   
-  private baseurl=`${environment.apiUrl}/Department`;
+  private baseurl='https://hospital-management-3y59.onrender.com/Department';
  
 
   constructor(

@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 })
 export class PatientserviceeService {
    
-    private baseurl=`${environment.apiUrl}/Patient`;
+    private baseurl='https://hospital-management-3y59.onrender.com/Patient';
 
   constructor(
     private http:HttpClient
