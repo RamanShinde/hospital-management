@@ -10,9 +10,12 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Arrays;
 import java.util.List;
 
+@CrossOrigin(origins = {
+        "http://localhost:4200",
+        "https://hospital‑frontend‑y4d0.onrender.com"
+})
 @RestController
 @RequestMapping("Appoitment")
-@CrossOrigin(origins = {"http://localhost:4200","https://appoitment-management.onrender.com"})
 public class AppoitmenController {
     @Autowired
     AppoitmentService service;
