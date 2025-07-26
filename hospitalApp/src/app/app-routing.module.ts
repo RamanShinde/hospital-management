@@ -25,7 +25,7 @@ import { DoctorLoginComponent } from './component/doctor-login/doctor-login.comp
 import { DoctordasgboardloginComponent } from './component/doctordasgboardlogin/doctordasgboardlogin.component';
 
 const routes: Routes = [
-  {path:"",component:HomeComponent},
+  {path:"",component:HomeComponent,pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
   { path: 'doctor-login', component: AdminDoctorComponent },
   {path:'doctorsdashboardlogin',component:DoctordasgboardloginComponent},
