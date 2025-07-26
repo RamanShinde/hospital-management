@@ -28,7 +28,7 @@ const routes: Routes = [
   {path:"",component:HomeComponent,pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
   { path: 'doctor-login', component: AdminDoctorComponent },
-  {path:'doctorsdashboardlogin',component:DoctordasgboardloginComponent},
+  {path:'doctor-dashboard',component:DoctordasgboardloginComponent},
   {
     path:"DoctordashboardComponent",component:DoctordashboardComponent,
     
