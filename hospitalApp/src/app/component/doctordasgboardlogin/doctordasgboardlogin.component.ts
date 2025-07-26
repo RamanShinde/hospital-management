@@ -19,7 +19,7 @@ export class DoctordasgboardloginComponent {
          errormesg="";
      
          login(){
-           if(this.email==="Deepak" && this.password==="deepak@1234" && this.id===5){
+           if(this.email==="RamanShinde" && this.password==="raman@1234" && this.id===3){
             localStorage.setItem("doctorId",this.id);
              this.route.navigate(["DoctordashboardComponent"])
            }
