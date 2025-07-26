@@ -1,31 +1,35 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
-@Injectable({
-  providedIn: 'root'
-})
+import { environment } from 'src/environments/environment.prod';
+@Injectable({ providedIn: 'root' })
 export class AppoitmetService {
+  private baseurl = environment.appointmentApiUrl;
 
-constructor(private http:HttpClient) { }
-private baseurl="http://localhost:8081/Appoitment";
- private appoitments:any[]=[];
+  constructor(private http: HttpClient) { }
 
-  addApoitment(appointment:any,doctorId:any):Observable<any>{
-     return this.http.post(`${this.baseurl}/AddAppoitment/${doctorId}`,appointment,{responseType:"text"});
+  addApoitment(appointment: any, doctorId: any): Observable<any> {
+    return this.http.post(
+      `${this.baseurl}/AddAppoitment/${doctorId}`,
+      appointment,
+      { responseType: 'text' });
   }
-  getAppoitment(){
+  getAppoitment(): Observable<any[]> {
     return this.http.get<any[]>(`${this.baseurl}/GetAllAppoitment`);
   }
-  updateAppoitment(newappointment:any,id:number):Observable<any>{
-    return this.http.put(`${this.baseurl}/Update/${id}`,newappointment,{responseType:"text"});
+  updateAppoitment(newappointment: any, id: number): Observable<any> {
+    return this.http.put(
+      `${this.baseurl}/Update/${id}`,
+      newappointment,
+      { responseType: 'text' });
   }
-  deleteAppointment(id:number):Observable<any>{
-    return this.http.delete(`${this.baseurl}/Delete/${id}`,{responseType:"text"});
+  deleteAppointment(id: number): Observable<any> {
+    return this.http.delete(
+      `${this.baseurl}/Delete/${id}`,
+      { responseType: 'text' });
   }
-
-  getappoitmentbyDoctorId(id:number){
-    return this.http.get<any>(`${this.baseurl}/getAppotmentByDoctorId/${id}`)
+  getappoitmentbyDoctorId(id: number): Observable<any> {
+    return this.http.get<any>(
+      `${this.baseurl}/getAppotmentByDoctorId/${id}`);
   }
-  
 }

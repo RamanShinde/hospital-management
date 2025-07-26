@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("Appoitment")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {"http://localhost:4200","https://appoitment-management.onrender.com"})
 public class AppoitmenController {
     @Autowired
     AppoitmentService service;
