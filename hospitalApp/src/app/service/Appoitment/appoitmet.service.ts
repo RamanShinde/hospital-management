@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 @Injectable({ providedIn: 'root' })
 export class AppoitmetService {
-  private baseurl = environment.appointmentApiUrl;
+  private baseurl = 'https://appoitment-management.onrender.com/Appoitment';
 
   constructor(private http: HttpClient) { }
 
