@@ -15,12 +15,12 @@ export class DoctordasgboardloginComponent {
      
          email="";
          password="";
-         id=null;
+         id=3;
          errormesg="";
      
          login(){
-           if(this.email==="RamanShinde" && this.password==="raman@1234" && this.id===3){
-            localStorage.setItem("doctorId",this.id);
+           if(this.email==="RamanShinde" && this.password==="raman@1234"){
+            localStorage.setItem("doctorId",this.id.toString());
              this.route.navigate(["DoctordashboardComponent"])
            }
            else{
