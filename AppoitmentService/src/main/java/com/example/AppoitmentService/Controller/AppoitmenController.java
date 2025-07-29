@@ -39,7 +39,7 @@ public class AppoitmenController {
     }
     @PostMapping("AddAppoitment/{id}")
     public String addAppoitment(@RequestBody Appoitment appoitment,@PathVariable int id){
-        Doctor doctor=template.getForObject("https://your-doctor-service.onrender.com/Doctor/GetDoctor/"+id, Doctor.class);
+        Doctor doctor=template.getForObject("https://hospital-management-3y59.onrender.com/Doctor/GetDoctor/"+id, Doctor.class);
 //        Doctor doctor = new Doctor();
 //        doctor.setAvailable(true);
         if(doctor.isAvailable()){
