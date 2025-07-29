@@ -12,7 +12,7 @@ import java.util.List;
 
 @CrossOrigin(origins = {
         "http://localhost:4200",
-        "https://hospital‑frontend‑y4d0.onrender.com"
+        "https://hospital-frontend-y4d0.onrender.com"
 })
 @RestController
 @RequestMapping("Appoitment")
@@ -34,7 +34,7 @@ public class AppoitmenController {
     }
     @GetMapping("/GetAllDoc")
     public List<Doctor> getAllDoctor(){
-        Doctor[] doctors=template.getForObject("http://localhost:8080/Doctor/get-doctor", Doctor[].class);
+        Doctor[] doctors=template.getForObject("https://hospital-management-3y59.onrender.com/Doctor/get-doctor", Doctor[].class);
         return Arrays.asList(doctors);
     }
     @PostMapping("AddAppoitment/{id}")

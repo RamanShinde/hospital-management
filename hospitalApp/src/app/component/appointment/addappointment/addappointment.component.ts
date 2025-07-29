@@ -27,7 +27,7 @@ export class AddappointmentComponent {
   onsubmit() {
     console.log(this.appointmentform.value);
     const formsValue = this.appointmentform.value;
-    const doctorId = formsValue.doctorId;
+    const doctorId = Number(formsValue.doctorId);
     this.appoitmentservice.addApoitment(formsValue, doctorId).subscribe(
       (resp:string) => {
         alert(resp);
