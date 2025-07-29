@@ -50,7 +50,7 @@ public class DoctorController {
     public Doctor getDoctor(@PathVariable int id) {
         return service.getDoctor(id);
     }
-    @PutMapping("{id}/Avialability")
+    @PutMapping("{did}/Avialability")
     public ResponseEntity<String> setAvailability(@PathVariable int did, @RequestParam boolean available){
         service.setAvailability(did,available);
         return ResponseEntity.ok("Availability updated");
