@@ -32,5 +32,7 @@ export class DoctorService {
   public deleteDoctor(id:number):Observable<any>{
     return this.http.delete(`${this.baseurl}/delete-${id}`,{responseType:'text'})
   }
-
+  public setAvailability(id:number,available:boolean):Observable<any>{
+    return this.http.put(`${this.baseurl}/${id}/${available}`,null,{responseType:'text'})
+  }
 } 

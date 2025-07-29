@@ -3,6 +3,7 @@ package com.example.HospitalManagmentSystem.Controller;
 import com.example.HospitalManagmentSystem.Entity.Doctor;
 import com.example.HospitalManagmentSystem.Service.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -48,5 +49,10 @@ public class DoctorController {
     @GetMapping("GetDoctor/{id}")
     public Doctor getDoctor(@PathVariable int id) {
         return service.getDoctor(id);
+    }
+    @PutMapping("{id}/Avialability")
+    public ResponseEntity<String> setAvailability(@PathVariable int did, @RequestParam boolean available){
+        service.setAvailability(did,available);
+        return ResponseEntity.ok("Availability updated");
     }
 }

@@ -1,6 +1,9 @@
 <div class="dashboard-heading">
   <h2>Your Today's Appointments</h2>
 </div>
+<button (click)="toggleAvailability()">
+  {{ isAvailable ? 'Mark Unavailable' : 'Mark Available' }}
+</button>
 
 <table class="card-table" *ngIf="appoitments.length>0;else noData">
   <thead>

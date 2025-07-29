@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AppoitmetService } from 'src/app/service/Appoitment/appoitmet.service';
+import { DoctorService } from 'src/app/service/doctor.service';
 
 @Component({
   selector: 'app-doctordashboard',
@@ -9,9 +10,12 @@ import { AppoitmetService } from 'src/app/service/Appoitment/appoitmet.service';
   styleUrls: ['./doctordashboard.component.css']
 })
 export class DoctordashboardComponent implements OnInit {
+isAvailable: any;
+
   appoitments: any[] = [];
   constructor(
     private appoitmentservice: AppoitmetService,
+    private doctorService:DoctorService,
   ) { };
 
   ngOnInit(): void {
@@ -29,5 +33,12 @@ export class DoctordashboardComponent implements OnInit {
     }
 
   }
+  toggleAvailability() {
+  const id = Number(localStorage.getItem('doctorId'));
+  this.doctorService.setAvailability(id, !this.isAvailable).subscribe(msg => {
+    this.isAvailable = !this.isAvailable;
+    alert(msg);
+})
+}
 
 }

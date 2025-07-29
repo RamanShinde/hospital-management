@@ -37,4 +37,10 @@ public class DoctorService {
     public Doctor getDoctor(int id) {
         return repo.findById(id).orElseThrow(()->new RuntimeException("User not found!!"));
     }
+
+    public void setAvailability(int did, boolean available) {
+        Doctor doctor=repo.findById(did).orElseThrow(()->new RuntimeException("User not found!!"));
+        doctor.setAvailable(available);
+        repo.save(doctor);
+    }
 }
