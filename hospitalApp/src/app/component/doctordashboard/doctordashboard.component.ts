@@ -10,7 +10,7 @@ import { DoctorService } from 'src/app/service/doctor.service';
   styleUrls: ['./doctordashboard.component.css']
 })
 export class DoctordashboardComponent implements OnInit {
-isAvailable: any;
+isAvailable: boolean | undefined;
 
   appoitments: any[] = [];
   constructor(
