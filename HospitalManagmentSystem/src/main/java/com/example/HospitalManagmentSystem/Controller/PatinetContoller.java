@@ -13,7 +13,7 @@ import com.example.HospitalManagmentSystem.Entity.Doctor;
 
 @CrossOrigin(origins = {
 		"http://localhost:4200",
-		"https://hospital-frontend-y4d0.onrender.com"
+		"https://hospital-frontend-1lgf.onrender.com"
 })
 @RequestMapping("/Patient")
 @RestController
