@@ -17,10 +17,10 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/User/**").permitAll() // open your APIs
-                        .anyRequest().authenticated()
-                )
-                .httpBasic(withDefaults());
+                        // Whitelist signup & login
+                        .requestMatchers("/User/SingupUser", "/User/login").permitAll()
+                        // everything else is protected
+                        .anyRequest().authenticated());
         return http.build();
     }
     @Bean

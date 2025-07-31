@@ -31,8 +31,8 @@ public class UserController {
         userService.singUp(user);
         return "register Successfully!!!";
     }
-    @GetMapping("Login/{email}/{password}/{role}")
-    public ResponseEntity<String>  login(@RequestBody LoginRequest request){
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestBody LoginRequest request){
        boolean islogged=userService.login(request.getEmail(),request.getPassword(), request.getRole());
        if(islogged){
            return ResponseEntity.ok("User login");
