@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserService {
@@ -21,14 +22,11 @@ public class UserService {
 
 
     public boolean login(String email, String password, String role) {
-        User user=userRepository.findByEmail(email).orElseThrow(()->new RuntimeException("User not found!!"));
-        if(user.getPassword().equals(password) && user.getRole().equals(role)){
-            return true;
+        Optional<User> useropt=userRepository.findByEmail(email);
+        if(useropt.isPresent()){
+            User user=useropt.get();
+            return user.getPassword().equals(password) && user.getRole().equalsIgnoreCase(role);
         }
-        else {
-            throw new RuntimeException("Invalid credentials or role");
-        }
-
-
+        return false;
     }
 }
