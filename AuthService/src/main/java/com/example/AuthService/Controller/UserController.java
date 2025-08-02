@@ -21,12 +21,12 @@ public class UserController {
         return "Welcome to authorization Service";
     }
 
-    @GetMapping("GetAllUser")
+    @GetMapping("/GetAllUser")
     public List<User> getAllUser() {
         return userService.getAllUser();
     }
 
-    @PostMapping("SingupUser")
+    @PostMapping("/SingupUser")
     public String singUp(@RequestBody User user){
         userService.singUp(user);
         return "register Successfully!!!";
