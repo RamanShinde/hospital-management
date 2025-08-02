@@ -24,9 +24,9 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeHttpRequests()
-                .requestMatchers("User/Message").permitAll()
-                .requestMatchers("User/SingupUser").permitAll()
-                .requestMatchers("User/login").permitAll()
+                .requestMatchers("/User/Message").permitAll()
+                .requestMatchers("/User/SingupUser").permitAll()
+                .requestMatchers("/User/login").permitAll()
                 .anyRequest().authenticated()
                 .and().sessionManagement().
                 sessionCreationPolicy(SessionCreationPolicy.STATELESS);
