@@ -28,8 +28,9 @@ public class SecurityConfig {
                 .requestMatchers("/User/SingupUser").permitAll()
                 .requestMatchers("/User/login").permitAll()
                 .anyRequest().authenticated()
-                .and().sessionManagement().
-                sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+                .and()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+
         return http.build();
     }
 
