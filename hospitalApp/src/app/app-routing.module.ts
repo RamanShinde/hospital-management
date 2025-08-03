@@ -30,7 +30,7 @@ const routes: Routes = [
   { path: 'doctor-login', component: AdminDoctorComponent },
   {path:'doctorsdashboardlogin',component:DoctordasgboardloginComponent},
   {
-    path:"DoctordashboardComponent",component:DoctordashboardComponent,
+    path:"doctor-dashboard",component:DoctordashboardComponent,
     
   },
   {path:'admin-login',component:AdminloginComponent},
