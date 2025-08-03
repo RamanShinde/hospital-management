@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { EmailValidator, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthserviceService } from 'src/app/service/Auhtorization/authservice.service';
 
 @Component({
   selector: 'app-adminlogin',
@@ -9,22 +10,27 @@ import { Router } from '@angular/router';
 })
 export class AdminloginComponent {
 
-    constructor
-    (private fb:FormBuilder,
-      private route:Router
-    ){}
+  constructor
+    (private fb: FormBuilder,
+      private service: AuthserviceService,
+      private route: Router
+    ) { }
 
-    email="";
-    password="";
-    errormesg="";
+  email = "";
+  password = "";
+  errormesg = "";
 
-    login(){
-      if(this.email==="raman" && this.password==="raman@1234"){
+  login() {
+    this.service.login(this.email, this.password, "ADMIN").subscribe({
+      next: (resp) => {
+        console.log(resp);
         this.route.navigate(["admin"])
+      },
+      error: (err) => {
+        console.error(err);
+        this.errormesg = "Invalid credentials!";
       }
-      else{
-        this.errormesg="Something went wrong!!"
-      }
-    }
-    
+    });
+  }
+
 }
