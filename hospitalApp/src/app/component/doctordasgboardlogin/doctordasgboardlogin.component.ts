@@ -18,10 +18,11 @@ export class DoctordasgboardloginComponent {
   email = "";
   password = "";
   id = 3;
+  role="";
   errormesg = "";
 
   login() {
-    this.auth.login(this.email, this.password,"DOCTOR").subscribe({
+    this.auth.login(this.email, this.password,this.role).subscribe({
       next: (res) => {
         localStorage.setItem("doctorId", this.id.toString());
         this.route.navigate(["DoctordashboardComponent"])

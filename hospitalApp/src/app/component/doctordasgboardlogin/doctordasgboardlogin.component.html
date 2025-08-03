@@ -1,5 +1,5 @@
 <div class="login-card">
-  <h3>Admin Login</h3>
+  <h3>Doctor-Login</h3>
   <form (ngSubmit)="login()" class="login-form">
     <div class="form-group">
       <label>Email</label>
@@ -22,13 +22,23 @@
         required
       />
     </div>
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label>Doctor-Id</label>
       <input
         type="number"
         name="id"
          [(ngModel)]="id"
         placeholder="Enter yor Id"
+        required
+      />
+    </div> -->
+     <div class="form-group">
+      <label>Role</label>
+      <input
+        type="text"
+        name="role"
+        [(ngModel)]="role"
+        placeholder="Enter your role"
         required
       />
     </div>
