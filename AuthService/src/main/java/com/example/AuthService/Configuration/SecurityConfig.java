@@ -13,10 +13,28 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
+    @Bean
+    public CorsFilter corsFilter() {
+        CorsConfiguration cfg = new CorsConfiguration();
+        // allow your Angular origin
+        cfg.addAllowedOrigin("https://hospital-frontend-1lgf.onrender.com");
+        // if you need localhost testing, add it too:
+        cfg.addAllowedOrigin("http://localhost:4200");
+        cfg.addAllowedHeader("*");
+        cfg.addAllowedMethod("*");
+        cfg.setAllowCredentials(true);
+
+        UrlBasedCorsConfigurationSource src = new UrlBasedCorsConfigurationSource();
+        src.registerCorsConfiguration("/**", cfg);
+        return new CorsFilter(src);
+    }
 
 
     @Bean
