@@ -1,11 +1,14 @@
-package com.example.AuthService.Entity;
+package com.example.AuthService.Service;
 
+import com.example.AuthService.Entity.User;
 import com.example.AuthService.Repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CustomUserDetailsService implements UserDetailsService {
     private final UserRepository userRepo;
     private final PasswordEncoder encoder;
