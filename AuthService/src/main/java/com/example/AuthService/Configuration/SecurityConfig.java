@@ -50,7 +50,7 @@ public class SecurityConfig {
         return cfg.getAuthenticationManager();
     }
 
-  
+
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
