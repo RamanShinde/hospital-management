@@ -18,10 +18,11 @@ export class AdminloginComponent {
 
   email = "";
   password = "";
+  role="";
   errormesg = "";
 
   login() {
-    this.service.login(this.email, this.password, "ADMIN").subscribe({
+    this.service.login(this.email, this.password, this.role).subscribe({
       next: (resp) => {
         console.log(resp);
         this.route.navigate(["admin"])
