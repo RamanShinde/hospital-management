@@ -23,10 +23,12 @@ import { AddappointmentComponent } from './component/appointment/addappointment/
 import { GetappointmentComponent } from './component/appointment/getappointment/getappointment.component';
 import { DoctorLoginComponent } from './component/doctor-login/doctor-login.component';
 import { DoctordasgboardloginComponent } from './component/doctordasgboardlogin/doctordasgboardlogin.component';
+import { SignupComponent } from './component/signup/signup.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent,pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
+   {path:'singup', component:SignupComponent},
   { path: 'doctor-login', component: AdminDoctorComponent },
   {path:'doctorsdashboardlogin',component:DoctordasgboardloginComponent},
   {

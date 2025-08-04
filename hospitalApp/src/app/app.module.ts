@@ -29,6 +29,7 @@ import { AddappointmentComponent } from './component/appointment/addappointment/
 import { GetappointmentComponent } from './component/appointment/getappointment/getappointment.component';
 import { AdminappointmentComponent } from './component/adminappointment/adminappointment.component';
 import { DoctordasgboardloginComponent } from './component/doctordasgboardlogin/doctordasgboardlogin.component';
+import { SignupComponent } from './signup/signup.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +56,7 @@ import { DoctordasgboardloginComponent } from './component/doctordasgboardlogin/
     GetappointmentComponent,
     AdminappointmentComponent,
     DoctordasgboardloginComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
