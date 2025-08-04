@@ -44,7 +44,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.POST, "/User/SingupUser", "/User/login").permitAll()
-                        .requestMatchers(HttpMethod.GET,  "/User/Message").permitAll()
+                        .requestMatchers(HttpMethod.GET,  "/User/Message","/User/GetAllUser").permitAll()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
