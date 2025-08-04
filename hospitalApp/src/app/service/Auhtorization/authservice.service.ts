@@ -23,6 +23,6 @@ export class AuthserviceService {
       password,
       role
     };
-    return this.http.post(`${this.baseUrl}/login`, request);
+    return this.http.post(`${this.baseUrl}/login`, request, { responseType: 'text' });
   }
 }
