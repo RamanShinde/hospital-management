@@ -24,7 +24,7 @@ export class DoctordasgboardloginComponent {
   login() {
     this.auth.login(this.email, this.password,this.role).subscribe({
       next: (res) => {
-        localStorage.setItem("doctorId", this.id.toString());
+        // localStorage.setItem("doctorId", this.id.toString());
         this.route.navigate(["doctor-dashboard"])
       },
       error: (err) => {
