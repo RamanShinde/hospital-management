@@ -17,7 +17,6 @@ import { GetPatientComponent } from './component/patient/get-patient/get-patient
 import { AdminPatientComponent } from './component/patient/admin-patient/admin-patient.component';
 import { AdddoctorComponent } from './component/doctor/adddoctor/adddoctor.component';
 import { GetDoctorComponent } from './component/doctor/get-doctor/get-doctor.component';
-import { AdminDoctorComponent } from './component/doctor/admin-doctor/admin-doctor.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -29,7 +28,7 @@ import { AddappointmentComponent } from './component/appointment/addappointment/
 import { GetappointmentComponent } from './component/appointment/getappointment/getappointment.component';
 import { AdminappointmentComponent } from './component/adminappointment/adminappointment.component';
 import { DoctordasgboardloginComponent } from './component/doctordasgboardlogin/doctordasgboardlogin.component';
-import { SignupComponent } from './signup/signup.component';
+import { SignupComponent } from './component/signup/signup.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +46,6 @@ import { SignupComponent } from './signup/signup.component';
     AdminPatientComponent,
     AdddoctorComponent,
     GetDoctorComponent,
-    AdminDoctorComponent,
     AdminloginComponent,
     DoctorLoginComponent,
     DoctordashboardComponent,
@@ -56,7 +54,7 @@ import { SignupComponent } from './signup/signup.component';
     GetappointmentComponent,
     AdminappointmentComponent,
     DoctordasgboardloginComponent,
-    SignupComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
