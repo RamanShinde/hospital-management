@@ -28,7 +28,7 @@ import { AdminDoctorComponent } from './component/admin-doctor/admin-doctor.comp
 const routes: Routes = [
   {path:"",component:HomeComponent,pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
-   {path:'singup', component:SignupComponent},
+   {path:'signup', component:SignupComponent},
   { path: 'doctor-login', component: AdminDoctorComponent },
   {path:'doctorsdashboardlogin',component:DoctordasgboardloginComponent},
   {
