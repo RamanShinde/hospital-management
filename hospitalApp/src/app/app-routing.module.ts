@@ -12,7 +12,6 @@ import { UpdateDepartmentComponent } from './component/department/update-departm
 import { AdminPatientComponent } from './component/patient/admin-patient/admin-patient.component';
 import { AddPatientComponent } from './component/patient/add-patient/add-patient.component';
 import { GetPatientComponent } from './component/patient/get-patient/get-patient.component';
-import { AdminDoctorComponent } from './component/doctor/admin-doctor/admin-doctor.component';
 import { AdddoctorComponent } from './component/doctor/adddoctor/adddoctor.component';
 import { GetDoctorComponent } from './component/doctor/get-doctor/get-doctor.component';
 import { AdminloginComponent } from './component/adminlogin/adminlogin.component';
@@ -24,6 +23,7 @@ import { GetappointmentComponent } from './component/appointment/getappointment/
 import { DoctorLoginComponent } from './component/doctor-login/doctor-login.component';
 import { DoctordasgboardloginComponent } from './component/doctordasgboardlogin/doctordasgboardlogin.component';
 import { SignupComponent } from './component/signup/signup.component';
+import { AdminDoctorComponent } from './component/admin-doctor/admin-doctor.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent,pathMatch: 'full'},
